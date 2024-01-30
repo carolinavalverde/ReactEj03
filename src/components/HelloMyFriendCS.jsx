@@ -2,7 +2,7 @@ import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const HelloWorld = ({ name }) => {
-  const [msj, setMsj] = useState("(desde el changed state)");
+  const [msj, setMsj] = useState("(vamos al changed state)");
 
   const cambiarEstado = () => {
     setMsj("(changed state)");

@@ -1,21 +1,24 @@
 import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const HelloWorld = ({ name }) => {
-  const [msj, setMsj] = useState("(from changed state)");
+  const [msj, setMsj] = useState("(desde el changed state)");
 
-  const handleClick = () => {
+  const cambiarEstado = () => {
     setMsj("(changed state)");
   };
 
   return (
-    <div className="container-fluid text-bg-dark text-center p-2">
-      <h1>
-        Hello {name}! {msj}
-      </h1>
-      <button className="btn btn-primary m-2" onClick={handleClick}>
-        Click me
-      </button>
-    </div>
+    <section className="container">
+      <div className="card rounded bg-primary text-warning text-center p-5 m-3">
+        <h1 className="fw-bold display-2">
+          Hello {name}! {msj}
+        </h1>
+        <button className="btn btn-warning m-5 p-2 fw-bolder" onClick={cambiarEstado}>
+          Click me
+        </button>
+      </div>
+    </section>
   );
 };
 
